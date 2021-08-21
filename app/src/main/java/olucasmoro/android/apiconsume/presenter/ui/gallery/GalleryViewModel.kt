@@ -1,4 +1,4 @@
-package olucasmoro.android.apiconsume.ui.gallery
+package olucasmoro.android.apiconsume.presenter.ui.gallery
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
