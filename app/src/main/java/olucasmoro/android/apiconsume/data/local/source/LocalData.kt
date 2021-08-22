@@ -1,4 +1,4 @@
-package olucasmoro.android.apiconsume.domain
+package olucasmoro.android.apiconsume.data.local.source
 
 import androidx.lifecycle.LiveData
 import olucasmoro.android.apiconsume.data.local.model.Album
@@ -6,11 +6,10 @@ import olucasmoro.android.apiconsume.data.local.model.Post
 import olucasmoro.android.apiconsume.data.local.model.Todo
 import olucasmoro.android.apiconsume.data.local.Type
 
-interface Repository {
+interface LocalData {
 
-    val listAlbums: LiveData<List<Album>>
-    val listPosts: LiveData<List<Post>>
-    val listTodos: LiveData<List<Todo>>
+    suspend fun <T> updateDatabaseList(list: List<T>, type: Type)
 
-    suspend fun updateList(type: Type)
+    fun <T> getAllItems(type: Type) : LiveData<List<T>>
+
 }

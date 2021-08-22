@@ -3,23 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_post">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="olucasmoro.android.apiconsume.presenter.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/nav_album"
+        android:name="olucasmoro.android.apiconsume.presenter.ui.fragment.AlbumFragment"
+        android:label="@string/album"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="olucasmoro.android.apiconsume.presenter.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_post"
+        android:name="olucasmoro.android.apiconsume.presenter.ui.fragment.PostFragment"
+        android:label="@string/post" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="olucasmoro.android.apiconsume.presenter.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_todo"
+        android:name="olucasmoro.android.apiconsume.presenter.ui.fragment.TodoFragment"
+        android:label="@string/todo" />
 </navigation>
